@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-blue: #0052FF;
+  --color-brand-bg: #0B0E11;
+  --color-brand-text: #EAECEF;
+  --color-brand-gray: #848E9C;
+  --color-brand-footer: #474D57;
+  --color-brand-gold: #F0B90B;
+  
+  --font-sans: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', Arial, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-brand-text font-sans antialiased;
+  }
+}
+
+.sleek-card {
+  @apply bg-white/5 border border-white/10 rounded-xl transition-all duration-300;
+}
+
+.sleek-card:hover {
+  @apply bg-white/[0.08] border-brand-blue;
+}
+
+.sleek-link {
+  @apply text-brand-gray hover:text-brand-blue transition-colors duration-200;
+}
+
+.sleek-btn-primary {
+  @apply bg-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all;
+}

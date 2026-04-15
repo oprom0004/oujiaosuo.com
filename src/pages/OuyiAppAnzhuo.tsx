@@ -1,0 +1,83 @@
+import React from 'react';
+import SEOPage from '../components/SEOPage';
+import { Smartphone, Download, ShieldCheck, AlertTriangle, CheckCircle2 } from 'lucide-react';
+
+export default function OuyiAppAnzhuo() {
+  return (
+    <SEOPage
+      title="欧意安卓版下载教程"
+      breadcrumbs={[{ name: 'APP下载', path: '/ouyi-app' }]}
+      subtitle="欧意OKX安卓版APK安装包下载指南，解决安装过程中的风险提示与权限问题。"
+      icon={<Smartphone size={48} className="text-green-600" />}
+      content={
+        <>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">安卓版下载：最快捷的安装方式</h2>
+            <p>
+              相比苹果系统，安卓用户下载欧意 APP 更加简单直接。您只需要下载官方提供的 APK 安装包即可完成安装。欧交所（oujiaosuo.com）为您实时同步官方最新的安装包，确保安全无毒。
+            </p>
+          </section>
+
+          <div className="bg-green-50 border border-green-100 p-10 rounded-3xl mb-12 text-center">
+            <h3 className="text-2xl font-bold text-green-900 mb-4">官方 APK 下载入口</h3>
+            <p className="mb-8 text-green-700">点击下方按钮，立即开始下载欧意官方安卓安装包。</p>
+            <button className="inline-flex items-center space-x-2 bg-green-600 text-white px-10 py-4 rounded-full font-bold hover:bg-green-700 transition-all shadow-lg shadow-green-200">
+              <Download size={20} />
+              <span>立即下载安卓版 (APK)</span>
+            </button>
+            <p className="mt-4 text-xs text-green-600 opacity-70">版本：v6.x.x | 大小：约 150MB | 更新时间：2026-04-15</p>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">安卓安装常见问题及解决方法</h2>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4 p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                <AlertTriangle className="text-yellow-500 mt-1 flex-shrink-0" size={24} />
+                <div>
+                  <h4 className="font-bold mb-2">提示“风险应用”或“病毒”？</h4>
+                  <p className="text-gray-600 text-sm">
+                    由于欧意 APP 涉及金融交易且未在部分国产手机应用商店上架，手机系统可能会误报风险。只要您是从欧交所或官网下载的，请放心点击“了解风险”、“继续安装”或“忽略警告”。
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4 p-6 bg-white border border-gray-100 rounded-2xl shadow-sm">
+                <ShieldCheck className="text-blue-500 mt-1 flex-shrink-0" size={24} />
+                <div>
+                  <h4 className="font-bold mb-2">无法安装，提示“解析包错误”？</h4>
+                  <p className="text-gray-600 text-sm">
+                    这通常是因为下载过程中文件损坏。请尝试删除旧文件，更换稳定的网络环境（如切换至 Wi-Fi）后重新下载。
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">安装步骤详解</h2>
+            <ol className="space-y-4 list-decimal pl-6">
+              <li><strong>下载 APK：</strong>点击本页面的下载按钮，等待文件下载完成。</li>
+              <li><strong>开启权限：</strong>点击安装包，若系统提示“禁止安装未知来源应用”，请前往设置中开启该权限。</li>
+              <li><strong>完成安装：</strong>按照屏幕提示点击“下一步”直到安装完成。</li>
+              <li><strong>登录使用：</strong>打开 APP，输入账号密码登录。若无账号，请点击“注册”。</li>
+            </ol>
+          </section>
+
+          <section className="bg-gray-900 text-white p-8 rounded-3xl">
+            <h3 className="text-xl font-bold mb-6 flex items-center">
+              <CheckCircle2 className="text-green-400 mr-2" size={24} />
+              安全校验建议
+            </h3>
+            <p className="text-gray-400 text-sm mb-4">
+              为了确保您下载的是官方正版，您可以在安装后通过以下方式进行简单校验：
+            </p>
+            <ul className="space-y-2 text-gray-400 text-sm">
+              <li>• 检查 APP 内的官方公告是否与官网一致。</li>
+              <li>• 检查客服系统是否能正常连接到官方在线支持。</li>
+              <li>• 首次登录建议开启谷歌验证器，进一步提升安全性。</li>
+            </ul>
+          </section>
+        </>
+      }
+    />
+  );
+}

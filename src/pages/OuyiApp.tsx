@@ -1,0 +1,93 @@
+import React from 'react';
+import SEOPage from '../components/SEOPage';
+import { Smartphone, Apple, Download, ShieldCheck, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
+
+export default function OuyiApp() {
+  return (
+    <SEOPage
+      title="欧意 APP 下载中心"
+      breadcrumbs={[]}
+      subtitle="官方正版欧意OKX移动端下载，支持安卓与苹果iOS系统，随时随地掌控您的数字资产。"
+      icon={<Smartphone size={48} className="text-blue-600" />}
+      content={
+        <>
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">欧意OKX APP：您的口袋交易所</h2>
+            <p>
+              欧意OKX APP是全球数千万用户的首选数字资产交易工具。它不仅集成了币币交易、合约交易、期权交易等核心功能，还内置了强大的Web3钱包，让您可以轻松探索DeFi、NFT和DApp的世界。
+            </p>
+            <p>
+              无论您是使用安卓手机还是苹果手机，欧意都为您提供了极致优化的操作体验。通过欧交所（oujiaosuo.com）下载官方正版APP，您可以确保资金安全，远离钓鱼网站和恶意软件。
+            </p>
+          </section>
+
+          <div className="grid md:grid-cols-2 gap-6 mb-12">
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+              <Apple size={48} className="mb-4 text-gray-900" />
+              <h3 className="text-xl font-bold mb-2">iOS 苹果版</h3>
+              <p className="text-sm text-gray-500 mb-6">支持 iPhone 和 iPad，需海外 Apple ID 下载。</p>
+              <Link to="/ouyi-app/pingguo" className="bg-black text-white px-8 py-3 rounded-full font-bold hover:bg-gray-800 transition-colors">
+                苹果下载教程
+              </Link>
+            </div>
+            <div className="bg-gray-50 p-8 rounded-2xl border border-gray-100 flex flex-col items-center text-center">
+              <Smartphone size={48} className="mb-4 text-green-600" />
+              <h3 className="text-xl font-bold mb-2">Android 安卓版</h3>
+              <p className="text-sm text-gray-500 mb-6">直接下载 APK 安装包，安全快捷。</p>
+              <Link to="/ouyi-app/anzhuo" className="bg-green-600 text-white px-8 py-3 rounded-full font-bold hover:bg-green-700 transition-colors">
+                安卓下载教程
+              </Link>
+            </div>
+          </div>
+
+          <section className="mb-12">
+            <h2 className="text-2xl font-bold mb-6">APP 核心功能亮点</h2>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="bg-blue-50 p-2 rounded-lg mt-1"><ShieldCheck size={20} className="text-blue-600" /></div>
+                <div>
+                  <h4 className="font-bold">极致安全防护</h4>
+                  <p className="text-gray-600 text-sm">支持生物识别登录（指纹/面部识别），内置多重验证机制，全方位守护您的账号安全。</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-yellow-50 p-2 rounded-lg mt-1"><Zap size={20} className="text-yellow-600" /></div>
+                <div>
+                  <h4 className="font-bold">实时行情预警</h4>
+                  <p className="text-gray-600 text-sm">自定义价格提醒，毫秒级推送，确保您不会错过任何一个重要的市场机会。</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-4">
+                <div className="bg-purple-50 p-2 rounded-lg mt-1"><Download size={20} className="text-purple-600" /></div>
+                <div>
+                  <h4 className="font-bold">一站式 Web3 体验</h4>
+                  <p className="text-gray-600 text-sm">内置 OKX Web3 钱包，支持 80+ 条公链，轻松管理您的 NFT 和 DeFi 资产。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section className="bg-blue-50 p-8 rounded-2xl border border-blue-100 mb-12">
+            <h3 className="text-xl font-bold text-blue-900 mb-4">下载注意事项</h3>
+            <ul className="list-disc pl-6 space-y-2 text-blue-800 text-sm">
+              <li>请务必通过欧交所提供的官方链接下载，切勿相信社交媒体上的不明文件。</li>
+              <li>安卓用户下载后，若提示“风险应用”，请点击“了解风险”并继续安装，这是由于签名未在应用商店备案所致。</li>
+              <li>苹果用户建议注册一个香港或美国的 Apple ID，这是目前最稳定的下载方式。</li>
+            </ul>
+          </section>
+
+          <section>
+            <h2 className="text-2xl font-bold mb-6">关于欧意 OKX</h2>
+            <p>
+              欧意 OKX 致力于构建全球领先的数字资产服务生态。通过不断的技术创新和产品迭代，欧意为用户提供了从基础交易到高级金融衍生品的全方位服务。APP 作为用户与平台互动的主要窗口，承载了欧意对极致用户体验的追求。
+            </p>
+            <p>
+              如果您在下载过程中遇到任何问题，可以访问我们的 <Link to="/ouyi-xiazai" className="text-blue-600 hover:underline">下载教程</Link> 页面，或者联系官方在线客服寻求帮助。
+            </p>
+          </section>
+        </>
+      }
+    />
+  );
+}
