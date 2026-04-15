@@ -32,3 +32,9 @@
 .sleek-btn-primary {
   @apply bg-brand-blue text-white px-6 py-3 rounded-lg font-bold hover:bg-blue-700 transition-all;
 }
+
+@media (max-width: 767px) {
+  body {
+    padding-bottom: calc(76px + env(safe-area-inset-bottom, 0px));
+  }
+}
