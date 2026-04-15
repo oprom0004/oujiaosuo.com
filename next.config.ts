@@ -2,6 +2,7 @@
 import path from 'node:path';
 
 const nextConfig: NextConfig = {
+  output: 'export',
   reactStrictMode: true,
   webpack: (config) => {
     config.resolve.alias = {
