@@ -15,7 +15,7 @@ export default function SEOPage({ title, subtitle, icon, content, sidebar, bread
   return (
     <div className="min-h-screen">
       {/* Breadcrumbs */}
-      <nav className="flex items-center space-x-2 text-[10px] text-brand-gray/60 mb-6 uppercase tracking-widest">
+      <nav className="flex items-center space-x-2 text-xs text-brand-gray/60 mb-6 uppercase tracking-widest">
         <a href="/" className="hover:text-brand-blue transition-colors">首页</a>
         {breadcrumbs?.map((crumb, idx) => (
           <React.Fragment key={idx}>

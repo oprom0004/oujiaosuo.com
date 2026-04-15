@@ -56,7 +56,7 @@ export default function Home() {
         {/* SEO Text */}
         <div className="space-y-6">
           <h2 className="text-base font-bold text-brand-gold uppercase tracking-wider">欧意OKX官方访问指南</h2>
-          <div className="text-xs leading-relaxed text-brand-gray space-y-4">
+          <div className="text-sm leading-relaxed text-brand-gray space-y-4">
             <p>
               欧交所提供最全的欧意下载入口，无论您是需要网页版直连、电脑版程序还是移动端APP下载，我们均提供实时更新的官方备用地址。针对网络无法打开的问题，我们特别准备了多个官方专用通道，确保用户在任何环境下都能稳定交易。
             </p>
@@ -80,15 +80,15 @@ export default function Home() {
             { icon: "OKX", title: "官方网站", sub: "okx.com 全球入口", path: "/ouyi-offcial" }
           ].map((link, idx) => (
             <Link key={idx} to={link.path} className="flex items-center p-3 bg-white/[0.03] hover:bg-brand-blue/15 rounded-lg transition-all group">
-              <div className="w-8 h-8 bg-[#1E2329] rounded-md flex items-center justify-center mr-3 text-brand-blue font-bold text-[10px]">
+              <div className="w-8 h-8 bg-[#1E2329] rounded-md flex items-center justify-center mr-3 text-brand-blue font-bold text-xs">
                 {link.icon}
               </div>
               <div className="flex-grow">
                 <div className="text-sm font-medium text-brand-text group-hover:text-brand-blue">{link.title}</div>
-                <div className="text-[10px] text-brand-gray opacity-60">{link.sub}</div>
+                <div className="text-xs text-brand-gray opacity-60">{link.sub}</div>
               </div>
               {link.badge && (
-                <span className="bg-brand-blue text-white text-[10px] px-2 py-0.5 rounded font-bold ml-2">
+                <span className="bg-brand-blue text-white text-xs px-2 py-0.5 rounded font-bold ml-2">
                   {link.badge}
                 </span>
               )}
@@ -104,7 +104,7 @@ export default function Home() {
           <h2 className="text-xl font-bold text-white tracking-tight">关于欧意OKX品牌称呼的统一说明</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="text-xs leading-relaxed text-brand-gray space-y-4">
+          <div className="text-sm leading-relaxed text-brand-gray space-y-4">
             <p>
               欧意OKX（前身为OKEx）作为全球顶尖的数字资产交易平台，在不同时期和不同用户群体中有着多种称呼。为了帮助用户准确识别官方渠道，避免误入钓鱼网站，欧交所特此整理了常见的品牌称呼变体。
             </p>
@@ -119,10 +119,10 @@ export default function Home() {
               { label: "习惯变体", tags: ["易欧", "o易", "欧亿", "殴易", "欧交所"] }
             ].map((group, idx) => (
               <div key={idx} className="space-y-2">
-                <div className="text-[10px] font-bold text-brand-gold uppercase opacity-80">{group.label}</div>
+                <div className="text-xs font-bold text-brand-gold uppercase opacity-80">{group.label}</div>
                 <div className="flex flex-wrap gap-1.5">
                   {group.tags.map(tag => (
-                    <span key={tag} className="px-2 py-0.5 bg-white/5 text-brand-text text-[10px] rounded border border-white/5">
+                    <span key={tag} className="px-2 py-0.5 bg-white/5 text-brand-text text-xs rounded border border-white/5">
                       {tag}
                     </span>
                   ))}
@@ -142,7 +142,7 @@ export default function Home() {
             { q: "下载的安装包安全吗？", a: "所有链接均指向官方原始文件，经哈希验证，确保纯净安全。" },
             { q: "注册需要实名认证吗？", a: "是的，为了合规和安全，需要完成KYC认证以获得更高权限。" }
           ].map((faq, idx) => (
-            <div key={idx} className="text-[11px]">
+            <div key={idx} className="text-xs">
               <div className="text-brand-text font-bold mb-1">{faq.q}</div>
               <div className="text-brand-gray leading-relaxed">{faq.a}</div>
             </div>

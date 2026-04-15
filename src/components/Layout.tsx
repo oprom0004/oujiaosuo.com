@@ -28,9 +28,15 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
           <div className="flex justify-between items-center h-20">
             <div className="flex items-center">
-              <Link to="/" className="flex items-center space-x-2">
-                <div className="text-2xl font-bold text-white flex items-center">
-                  <span className="text-brand-blue mr-1">●</span>欧交所
+              <Link to="/" className="flex items-center group">
+                <div className="flex items-center">
+                  <div className="text-2xl font-bold text-white flex items-center">
+                    <span className="text-brand-blue mr-1.5">●</span>欧交所
+                  </div>
+                  <div className="h-4 w-px bg-white/20 mx-3 self-center mt-1" />
+                  <div className="text-sm text-brand-gray/60 font-mono tracking-tight mt-1 group-hover:text-brand-blue transition-colors">
+                    oujiaosuo.com
+                  </div>
                 </div>
               </Link>
             </div>
@@ -122,7 +128,7 @@ export default function Layout({ children }: LayoutProps) {
           </div>
           <div className="grid grid-cols-2 gap-4">
             <div>
-              <div className="text-[10px] font-bold text-white/40 uppercase mb-3 tracking-widest">快速导航</div>
+            <div className="text-xs font-bold text-white/40 uppercase mb-3 tracking-widest">快速导航</div>
               <ul className="space-y-2">
                 <li><Link to="/ouyi-app" className="text-xs text-brand-gray hover:text-brand-blue">APP下载</Link></li>
                 <li><Link to="/ouyi-pc" className="text-xs text-brand-gray hover:text-brand-blue">电脑版下载</Link></li>
@@ -130,7 +136,7 @@ export default function Layout({ children }: LayoutProps) {
               </ul>
             </div>
             <div>
-              <div className="text-[10px] font-bold text-white/40 uppercase mb-3 tracking-widest">官方支持</div>
+            <div className="text-xs font-bold text-white/40 uppercase mb-3 tracking-widest">官方支持</div>
               <ul className="space-y-2">
                 <li><Link to="/ouyi-offcial" className="text-xs text-brand-gray hover:text-brand-blue">官方入口</Link></li>
                 <li><Link to="/ouyi-web" className="text-xs text-brand-gray hover:text-brand-blue">网页直连</Link></li>
@@ -140,22 +146,21 @@ export default function Layout({ children }: LayoutProps) {
           </div>
         </div>
 
-        {/* SEO Brand Index */}
         <div className="py-6 border-t border-white/5 mb-6">
-          <div className="text-[10px] text-white/30 mb-3">品牌索引 / 常用搜索：</div>
+          <div className="text-xs text-white/30 mb-3">品牌索引 / 常用名：</div>
           <div className="flex flex-wrap gap-x-4 gap-y-2">
             {[
               "欧易OKX", "欧意下载", "OKX官网", "欧易交易所", "易欧APP", "o易入口", 
               "欧亿官网", "OKEx下载", "殴易注册", "欧意电脑版", "OKX手机版", "欧交所直连"
             ].map(term => (
-              <span key={term} className="text-[10px] text-brand-gray/40 hover:text-brand-blue cursor-default transition-colors">
+              <span key={term} className="text-xs text-brand-gray/40 hover:text-brand-blue cursor-default transition-colors">
                 {term}
               </span>
             ))}
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-brand-footer pt-6 border-t border-white/5">
+        <div className="flex flex-col md:flex-row justify-between items-center text-xs text-brand-footer pt-6 border-t border-white/5">
           <div className="mb-4 md:mb-0">
             © 2026 oujiaosuo.com | 欧意下载中心 24H 自动更新
           </div>
