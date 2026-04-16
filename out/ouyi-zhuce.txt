@@ -1,0 +1,22 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[8924,[],""]
+4:I[2619,["619","static/chunks/619-ba102abea3e3d0e4.js","345","static/chunks/app/not-found-943b338e534a0387.js"],""]
+5:I[7989,[],"ClientSegmentRoot"]
+6:I[1432,["162","static/chunks/162-6de164612b8db209.js","619","static/chunks/619-ba102abea3e3d0e4.js","930","static/chunks/930-eb68cf19e1307d1b.js","750","static/chunks/app/(site)/layout-bc8c017a5d72341d.js"],"default"]
+8:I[3339,["162","static/chunks/162-6de164612b8db209.js","930","static/chunks/930-eb68cf19e1307d1b.js","376","static/chunks/app/(site)/ouyi-zhuce/page-e08d9763c1b18e4b.js"],"default"]
+9:I[4431,[],"OutletBoundary"]
+b:I[5278,[],"AsyncMetadataOutlet"]
+d:I[4431,[],"ViewportBoundary"]
+f:I[4431,[],"MetadataBoundary"]
+10:"$Sreact.suspense"
+12:I[7150,[],""]
+:HL["/_next/static/css/a814df95c99e647a.css","style"]
+:HL["/_next/static/css/97c5525f9198892a.css","style"]
+0:{"P":null,"b":"ypM2PvsJJzZCTkVIWH-qU","p":"","c":["","ouyi-zhuce"],"i":false,"f":[[["",{"children":["(site)",{"children":["ouyi-zhuce",{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/a814df95c99e647a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","html",null,{"lang":"zh-CN","children":["$","body",null,{"style":{"background":"#0B0E11","color":"#EAECEF","fontFamily":"sans-serif","display":"flex","alignItems":"center","justifyContent":"center","minHeight":"100vh","margin":0},"children":["$","div",null,{"style":{"textAlign":"center"},"children":[["$","h1",null,{"style":{"fontSize":"4rem","fontWeight":"bold","color":"#0052FF","margin":0},"children":"404"}],["$","p",null,{"style":{"color":"#848E9C","marginTop":"1rem"},"children":"页面不存在"}],["$","$L4",null,{"href":"/","style":{"display":"inline-block","marginTop":"1.5rem","padding":"0.75rem 2rem","background":"#0052FF","color":"#fff","borderRadius":"8px","textDecoration":"none","fontWeight":"bold"},"children":"返回首页"}]]}]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":["(site)",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/97c5525f9198892a.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L5",null,{"Component":"$6","slots":{"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]},"params":{},"promise":"$@7"}]]}],{"children":["ouyi-zhuce",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":[["$","$L8",null,{}],null,["$","$L9",null,{"children":["$La",["$","$Lb",null,{"promise":"$@c"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Ld",null,{"children":"$Le"}],null],["$","$Lf",null,{"children":["$","div",null,{"hidden":true,"children":["$","$10",null,{"fallback":null,"children":"$L11"}]}]}]]}],false]],"m":"$undefined","G":["$12",[]],"s":false,"S":true}
+7:"$0:f:0:1:2:children:1:props:children:1:props:params"
+e:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+13:I[622,[],"IconMark"]
+c:{"metadata":[["$","title","0",{"children":"欧意_OKX_殴易注册官网入口-欧交所 | 欧意下载中心"}],["$","meta","1",{"name":"description","content":"欧交所导航站，覆盖欧意OKX电脑端、网页端和APP下载与注册入口。"}],["$","link","2",{"rel":"canonical","href":"https://oujiaosuo.com/ouyi-zhuce"}],["$","link","3",{"rel":"icon","href":"/favicon.ico"}],["$","link","4",{"rel":"apple-touch-icon","href":"/favicon.ico"}],["$","$L13","5",{}]],"error":null,"digest":"$undefined"}
+11:"$c:metadata"

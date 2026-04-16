@@ -1,2 +1,72 @@
 ﻿'use client';
-import React from 'react'; import SEOPage from '../components/SEOPage'; import { Globe, ExternalLink, ShieldCheck, Zap } from 'lucide-react'; import { useGateway } from '@/src/features/DownloadGateway/GatewayContext'; export default function OuyiWeb() { const { openGateway } = useGateway(); return (<SEOPage title="欧意网页版入口" breadcrumbs={[]} subtitle="欧意OKX官方网页版直连网址，无需下载，浏览器一键访问，安全加密连接。" icon={<Globe size={48} className="text-green-600" />} content={<>           <section className="mb-12">             <h2 className="text-2xl font-bold mb-6">欧意网页版：随时随地的交易体验</h2>             <p>               欧意网页版是为那些追求便捷、无需安装客户端的用户设计的交易入口。无论您是在办公室、家中还是旅途中，只要有浏览器和网络，您就可以通过欧意网页版轻松管理您的数字资产。             </p>             <p>               欧交所（oujiaosuo.com）为您实时更新欧意官方网页版的最新直连网址，确保您在任何网络环境下都能快速、安全地登录。             </p>           </section>            <div className="bg-blue-600 text-white p-10 rounded-3xl mb-12 text-center">             <h3 className="text-2xl font-bold mb-4">官方网页版直连入口</h3>             <p className="mb-8 text-blue-100">点击下方按钮，直接跳转至欧意官方网页版登录页面。</p>             <button onClick={openGateway} className="inline-flex items-center space-x-2 bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all cursor-pointer"             >               <span>立即访问网页版</span>               <ExternalLink size={20} />             </button>           </div>            <section className="mb-12">             <h2 className="text-2xl font-bold mb-6">网页版核心优势</h2>             <div className="grid md:grid-cols-2 gap-8">               <div className="flex items-start space-x-4">                 <div className="bg-green-50 p-3 rounded-xl"><ShieldCheck className="text-green-600" size={24} /></div>                 <div>                   <h4 className="font-bold mb-2">无需安装，即开即用</h4>                   <p className="text-gray-600 text-sm">不占用本地磁盘空间，适合临时使用或在公用电脑上快速查看行情。</p>                 </div>               </div>               <div className="flex items-start space-x-4">                 <div className="bg-blue-50 p-3 rounded-xl"><Zap className="text-blue-600" size={24} /></div>                 <div>                   <h4 className="font-bold mb-2">全功能覆盖</h4>                   <p className="text-gray-600 text-sm">网页版支持币币、合约、期权、理财等所有核心交易功能，与 APP 数据实时同步。</p>                 </div>               </div>             </div>           </section>            <section className="mb-12">             <h2 className="text-2xl font-bold mb-6">如何确保网页版访问安全？</h2>             <p>               在访问欧意网页版时，安全是第一位的。请务必遵循以下建议：             </p>             <ul className="list-decimal pl-6 space-y-4">               <li><strong>核对网址：</strong>始终通过欧交所提供的官方链接进入，并检查浏览器地址栏是否显示正确的域名（如 okx.com）以及 SSL 加密锁标志。</li>               <li><strong>开启双重验证（2FA）：</strong>在登录时，务必开启谷歌验证器（Google Authenticator）或短信验证，为您的账户增加一道防线。</li>               <li><strong>警惕钓鱼网站：</strong>欧意官方绝不会通过非官方渠道向您索要密码、私钥或验证码。</li>             </ul>           </section>            <section className="bg-gray-50 p-8 rounded-2xl border border-gray-100">             <h3 className="text-xl font-bold mb-4">网页版打不开怎么办？</h3>             <p className="text-gray-600">               如果您发现网页版无法打开，通常是由于网络环境限制导致的。您可以尝试以下方法：               <br />1. 使用欧交所提供的备用网址。               <br />2. 尝试更换浏览器（推荐使用 Chrome 或 Edge）。               <br />3. 下载并安装欧意电脑客户端，客户端通常具有更好的网络穿透能力。             </p>           </section>         </>} />); }
+import React from 'react';
+import SEOPage from '../components/SEOPage';
+import { Globe, ExternalLink, ShieldCheck, Zap } from 'lucide-react';
+import { useGateway } from '@/src/features/DownloadGateway/GatewayContext';
+import content from './site-content.json';
+
+const c = content.webPage;
+
+export default function OuyiWeb() {
+    const { openGateway } = useGateway();
+    return (
+        <SEOPage
+            title={c.title}
+            breadcrumbs={[]}
+            subtitle={c.subtitle}
+            icon={<Globe size={48} className="text-green-600" />}
+            content={
+                <>
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6">{c.sectionTitle}</h2>
+                        <p>{c.intro1}</p>
+                        <p className="mt-4">{c.intro2}</p>
+                    </section>
+
+                    <div className="bg-blue-600 text-white p-10 rounded-3xl mb-12 text-center">
+                        <h3 className="text-2xl font-bold mb-4">{c.ctaSectionTitle}</h3>
+                        <p className="mb-8 text-blue-100">{c.ctaSectionDesc}</p>
+                        <button
+                            onClick={openGateway}
+                            className="inline-flex items-center space-x-2 bg-white text-blue-600 px-10 py-4 rounded-full font-bold hover:bg-gray-100 transition-all cursor-pointer"
+                        >
+                            <span>{c.cta}</span>
+                            <ExternalLink size={20} />
+                        </button>
+                    </div>
+
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6">网页版核心优势</h2>
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {c.features.map((f, idx) => (
+                                <div key={idx} className="flex items-start space-x-4">
+                                    <div className={`p-3 rounded-xl ${idx === 0 ? 'bg-green-50' : 'bg-blue-50'}`}>
+                                        {idx === 0 ? <ShieldCheck className="text-green-600" size={24} /> : <Zap className="text-blue-600" size={24} />}
+                                    </div>
+                                    <div>
+                                        <h4 className="font-bold mb-2">{f.title}</h4>
+                                        <p className="text-gray-600 text-sm">{f.desc}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </section>
+
+                    <section className="mb-12">
+                        <h2 className="text-2xl font-bold mb-6">{c.safetyTitle}</h2>
+                        <ul className="list-decimal pl-6 space-y-4">
+                            {c.safetyTips.map((tip, idx) => (
+                                <li key={idx}>{tip}</li>
+                            ))}
+                        </ul>
+                    </section>
+
+                    <section className="bg-gray-50 p-8 rounded-2xl border border-gray-100">
+                        <h3 className="text-xl font-bold mb-4">{c.troubleshootTitle}</h3>
+                        <p className="text-gray-600">{c.troubleshootDesc}</p>
+                    </section>
+                </>
+            }
+        />
+    );
+}

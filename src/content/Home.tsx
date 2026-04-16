@@ -4,6 +4,9 @@ import { motion } from 'motion/react';
 import { ShieldCheck, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { useGateway } from '@/src/features/DownloadGateway/GatewayContext';
+import content from './site-content.json';
+
+const c = content.homepage;
 
 export default function Home() {
     const [today, setToday] = useState('');
@@ -23,17 +26,17 @@ export default function Home() {
                     transition={{ duration: 0.6 }}
                 >
                     <h1 className="text-4xl md:text-[42px] font-bold text-white mb-2 tracking-tight">
-                        欧意下载中心
+                        {c.hero.h1}
                     </h1>
                     <p className="text-brand-gray text-lg mb-8">
-                        官方APP/电脑网页版网址直连 · {today || '加载中...'} 更新
+                        {c.hero.subtitle} · {today || '加载中...'} 更新
                     </p>
                     <div className="flex justify-center">
                         <button
                             onClick={openGateway}
                             className="inline-flex items-center space-x-2 px-8 py-3 bg-brand-blue text-white rounded-full font-bold hover:bg-blue-700 transition-all duration-300 shadow-[0_0_20px_rgba(0,82,255,0.4)] hover:shadow-[0_0_30px_rgba(0,82,255,0.6)] transform hover:-translate-y-0.5 cursor-pointer"
                         >
-                            <span>欧意OKX官方入口</span>
+                            <span>{c.hero.cta}</span>
                             <ExternalLink size={18} />
                         </button>
                     </div>
@@ -42,12 +45,7 @@ export default function Home() {
 
             {/* Download Grid */}
             <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-10">
-                {[
-                    { icon: 'iOS', title: '苹果版下载', desc: '支持官方App Store及海外ID下载', path: '/ouyi-app/pingguo' },
-                    { icon: 'And', title: '安卓版下载', desc: '直连官方APK安装包，极速更新', path: '/ouyi-app/anzhuo' },
-                    { icon: 'Win', title: 'Windows版', desc: '深度适配电脑端，支持多窗口交易', path: '/ouyi-pc' },
-                    { icon: 'Mac', title: 'MacOS版', desc: 'M系列芯片原生支持，稳定流畅', path: '/ouyi-pc' },
-                ].map((card, idx) => (
+                {c.downloadGrid.map((card, idx) => (
                     <Link key={idx} to={card.path} className="sleek-card p-6 text-center group">
                         <div className="text-3xl font-bold text-brand-blue mb-4 italic group-hover:scale-110 transition-transform">
                             {card.icon}
@@ -62,30 +60,17 @@ export default function Home() {
             <section className="grid lg:grid-cols-2 gap-10 bg-white/[0.02] rounded-2xl p-8 flex-grow">
                 {/* SEO Text */}
                 <div className="space-y-6">
-                    <h2 className="text-base font-bold text-brand-gold uppercase tracking-wider">欧意OKX官方访问指南</h2>
+                    <h2 className="text-base font-bold text-brand-gold uppercase tracking-wider">{c.seoTitle}</h2>
                     <div className="text-sm leading-relaxed text-brand-gray space-y-4">
-                        <p>
-                            欧交所提供最全的欧意下载入口，无论您是需要网页版直连、电脑版程序还是移动端APP下载，我们均提供实时更新的官方备用地址。针对网络无法打开的问题，我们特别准备了多个官方专用通道，确保用户在任何环境下都能稳定交易。
-                        </p>
-                        <p>
-                            欧意OKX作为全球领先的数字资产交易平台，其安全性、流动性均处于行业顶尖水平。通过本下载中心获取的程序均经过哈希值验证，确保纯净安全。建议用户定期通过官方渠道更新至最新版本，以获得最佳的交易体验和安全保障。目前支持欧意注册、欧意实名、欧意入金等全方位业务指引。
-                        </p>
-                        <p>
-                            欧意OKX不仅提供基础的币币交易，还涵盖了合约交易、期权交易、杠杆交易以及独具特色的Web3钱包、NFT市场和DeFi服务。无论您是初入币圈的新手，还是经验丰富的专业交易员，欧意都能满足您的多样化需求。
-                        </p>
+                        {c.seoText.map((para, idx) => (
+                            <p key={idx}>{para}</p>
+                        ))}
                     </div>
                 </div>
 
                 {/* Quick Links Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {[
-                        { icon: 'PC', title: '欧意电脑版', sub: 'V6.45.2 正式版', path: '/ouyi-pc' },
-                        { icon: 'WEB', title: '网页直接登录', sub: '免下载, 跨平台直连', path: '/ouyi-web' },
-                        { icon: 'REG', title: '新用户注册', sub: '领取新手数字盲盒', path: '/ouyi-zhuce', badge: 'NEW' },
-                        { icon: 'OFF', title: '官方备用通道', sub: '解决网络打不开问题', path: '/ouyi-offcial' },
-                        { icon: 'HELP', title: '新手教程', sub: '安装/实名/入金引导', path: '/ouyi-xiazai' },
-                        { icon: 'OKX', title: '官方网站', sub: 'okx.com 全球入口', path: '/ouyi-offcial' },
-                    ].map((link, idx) => (
+                    {c.quickLinks.map((link, idx) => (
                         <Link key={idx} to={link.path} className="flex items-center p-3 bg-white/[0.03] hover:bg-brand-blue/15 rounded-lg transition-all group">
                             <div className="w-8 h-8 bg-[#1E2329] rounded-md flex items-center justify-center mr-3 text-brand-blue font-bold text-xs">
                                 {link.icon}
@@ -94,7 +79,7 @@ export default function Home() {
                                 <div className="text-sm font-medium text-brand-text group-hover:text-brand-blue">{link.title}</div>
                                 <div className="text-xs text-brand-gray opacity-60">{link.sub}</div>
                             </div>
-                            {link.badge && (
+                            {'badge' in link && link.badge && (
                                 <span className="bg-brand-blue text-white text-xs px-2 py-0.5 rounded font-bold ml-2">
                                     {link.badge}
                                 </span>
@@ -104,27 +89,19 @@ export default function Home() {
                 </div>
             </section>
 
-            {/* Brand Clarification Section */}
+            {/* Brand Section */}
             <section className="mt-10 p-8 bg-white/[0.02] rounded-2xl border border-white/5">
                 <div className="flex items-center space-x-3 mb-6">
                     <ShieldCheck className="text-brand-blue" size={24} />
-                    <h2 className="text-xl font-bold text-white tracking-tight">关于欧意OKX品牌称呼的统一说明</h2>
+                    <h2 className="text-xl font-bold text-white tracking-tight">{c.brandSection.title}</h2>
                 </div>
                 <div className="grid md:grid-cols-2 gap-8">
                     <div className="text-sm leading-relaxed text-brand-gray space-y-4">
-                        <p>
-                            欧意OKX（前身为OKEx）作为全球顶尖的数字资产交易平台，在不同时期和不同用户群体中有着多种称呼。为了帮助用户准确识别官方渠道，避免误入钓鱼网站，欧交所特此整理了常见的品牌称呼变体。
-                        </p>
-                        <p>
-                            无论您搜索的是官方标准称呼还是民间习惯用法，欧交所（oujiaosuo.com）均为您提供统一的官方纯净版下载入口，确保程序安全无毒，直连官方服务器。
-                        </p>
+                        <p>{c.brandSection.intro}</p>
+                        <p>{c.brandSection.note}</p>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                        {[
-                            { label: '官方标准', tags: ['欧易', '欧意', 'OKX'] },
-                            { label: '历史沿革', tags: ['OKEx'] },
-                            { label: '习惯变体', tags: ['易欧', 'o易', '欧亿', '殴易', '欧交所'] },
-                        ].map((group, idx) => (
+                        {c.brandSection.aliases.map((group, idx) => (
                             <div key={idx} className="space-y-2">
                                 <div className="text-xs font-bold text-brand-gold uppercase opacity-80">{group.label}</div>
                                 <div className="flex flex-wrap gap-1.5">
@@ -144,11 +121,7 @@ export default function Home() {
             <section className="mt-10 pt-10 border-t border-white/5">
                 <h3 className="text-sm font-bold text-white mb-4">常见问题解答</h3>
                 <div className="grid md:grid-cols-3 gap-6">
-                    {[
-                        { q: '欧意OKX官网打不开怎么办？', a: '由于网络原因，部分地区可能无法直接访问。请使用备用通道或下载电脑客户端。' },
-                        { q: '下载的安装包安全吗？', a: '所有链接均指向官方原始文件，经哈希验证，确保纯净安全。' },
-                        { q: '注册需要实名认证吗？', a: '是的，为了合规和安全，需要完成KYC认证以获得更高权限。' },
-                    ].map((faq, idx) => (
+                    {c.faq.map((faq, idx) => (
                         <div key={idx} className="text-xs">
                             <div className="text-brand-text font-bold mb-1">{faq.q}</div>
                             <div className="text-brand-gray leading-relaxed">{faq.a}</div>

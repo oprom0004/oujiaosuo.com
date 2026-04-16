@@ -1,18 +1,17 @@
 ﻿import type { Metadata } from 'next';
 import '../index.css';
-
-const BASE_URL = 'https://oujiaosuo.com';
+import siteConfig from '@/src/site.config';
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(siteConfig.baseUrl),
   alternates: {
     canonical: '/',
   },
   title: {
-    template: '%s | 欧意下载中心',
-    default: '欧意下载中心_OKX欧易电脑网页版_殴易APP网址-欧交所官网',
+    template: `%s | ${siteConfig.titleSuffix}`,
+    default: siteConfig.titleDefault,
   },
-  description: '欧交所导航站，覆盖欧意OKX电脑端、网页端和APP下载与注册入口。',
+  description: siteConfig.description,
   icons: {
     icon: '/favicon.ico',
     apple: '/favicon.ico',
