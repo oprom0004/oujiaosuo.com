@@ -3,9 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
 import { ShieldCheck, ExternalLink } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useGateway } from '@/src/features/DownloadGateway/GatewayContext';
 
 export default function Home() {
     const [today, setToday] = useState('');
+    const { openGateway } = useGateway();
 
     useEffect(() => {
         setToday(new Date().toISOString().slice(0, 10));
@@ -27,15 +29,13 @@ export default function Home() {
                         官方APP/电脑网页版网址直连 · {today || '加载中...'} 更新
                     </p>
                     <div className="flex justify-center">
-                        <a
-                            href="https://www.okx.com"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center space-x-2 px-8 py-3 bg-brand-blue text-white rounded-full font-bold hover:bg-blue-700 transition-all duration-300 shadow-[0_0_20px_rgba(0,82,255,0.4)] hover:shadow-[0_0_30px_rgba(0,82,255,0.6)] transform hover:-translate-y-0.5"
+                        <button
+                            onClick={openGateway}
+                            className="inline-flex items-center space-x-2 px-8 py-3 bg-brand-blue text-white rounded-full font-bold hover:bg-blue-700 transition-all duration-300 shadow-[0_0_20px_rgba(0,82,255,0.4)] hover:shadow-[0_0_30px_rgba(0,82,255,0.6)] transform hover:-translate-y-0.5 cursor-pointer"
                         >
                             <span>欧意OKX官方入口</span>
                             <ExternalLink size={18} />
-                        </a>
+                        </button>
                     </div>
                 </motion.div>
             </section>
